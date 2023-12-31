@@ -1,14 +1,16 @@
 import 'package:bloc_demo/counter/view/counter_page.dart';
 import 'package:bloc_demo/homepage/cubit/cubit.dart';
+import 'package:bloc_demo/timer/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 class _ScreenItem {
-  _ScreenItem(
-      {required this.name,
-      required this.icon,
-      required this.selectedIcon,
-      required this.body});
+  _ScreenItem({
+    required this.name,
+    required this.icon,
+    required this.selectedIcon,
+    required this.body,
+  });
 
   final String name;
   final IconData icon;
@@ -30,7 +32,7 @@ class HomepageView extends StatelessWidget {
       name: 'Timer',
       icon: Icons.timer_outlined,
       selectedIcon: Icons.timer,
-      body: const CounterPage(),
+      body: const TimerPage(),
     ),
   ];
 
@@ -39,9 +41,7 @@ class HomepageView extends StatelessWidget {
     return BlocBuilder<HomepageCubit, int>(
       builder: (context, state) {
         return Scaffold(
-          appBar: AppBar(
-            title: Text(_screens.elementAt(state).name),
-          ),
+          appBar: AppBar(title: Text(_screens.elementAt(state).name)),
           body: _screens.elementAt(state).body,
           bottomNavigationBar: NavigationBar(
             selectedIndex: state,
