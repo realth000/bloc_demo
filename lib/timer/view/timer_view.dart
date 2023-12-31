@@ -7,6 +7,7 @@ class TimerView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('rebuild TimerView');
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       mainAxisAlignment: MainAxisAlignment.center,

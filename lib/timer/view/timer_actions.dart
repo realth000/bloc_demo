@@ -7,6 +7,7 @@ class TimerActions extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('rebuild TimerActions');
     return BlocBuilder<TimerBloc, TimerState>(
       buildWhen: (prev, state) => prev.runtimeType != state.runtimeType,
       builder: (context, state) {

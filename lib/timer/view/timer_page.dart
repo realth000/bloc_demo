@@ -8,6 +8,7 @@ class TimerPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    print('rebuild TimerPage');
     return BlocProvider(
       create: (_) => TimerBloc(ticker: Ticker()),
       child: const TimerView(),
