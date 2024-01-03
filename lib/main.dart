@@ -5,5 +5,5 @@ import 'package:flutter/material.dart';
 
 void main() {
   Bloc.observer = const Observer();
-  runApp(const App());
+  runApp(App());
 }

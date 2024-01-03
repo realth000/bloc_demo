@@ -1,6 +1,7 @@
 import 'package:bloc_demo/counter/view/counter_page.dart';
 import 'package:bloc_demo/homepage/cubit/cubit.dart';
 import 'package:bloc_demo/infinite_list/posts/view/view.dart';
+import 'package:bloc_demo/login/login/login_root_page.dart';
 import 'package:bloc_demo/timer/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -40,6 +41,12 @@ class HomepageView extends StatelessWidget {
       icon: Icons.list_outlined,
       selectedIcon: Icons.list,
       body: const PostsPage(),
+    ),
+    _ScreenItem(
+      name: 'Login',
+      icon: Icons.login_outlined,
+      selectedIcon: Icons.login,
+      body: const LoginRootPage(),
     ),
   ];
 

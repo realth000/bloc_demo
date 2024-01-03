@@ -33,6 +33,13 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "2.11.0"
+  auth_repo:
+    dependency: "direct main"
+    description:
+      path: "lib/packages/auth_repo"
+      relative: true
+    source: path
+    version: "0.0.0"
   bloc:
     dependency: "direct main"
     description:
@@ -171,6 +178,14 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  formz:
+    dependency: "direct main"
+    description:
+      name: formz
+      sha256: df8301299601139de7e653e68a07c332fd2db7cec65745eca1a1ea73fb711e06
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "0.6.1"
   frontend_server_client:
     dependency: transitive
     description:
@@ -400,6 +415,14 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.10.0"
+  sprintf:
+    dependency: transitive
+    description:
+      name: sprintf
+      sha256: "1fc9ffe69d4df602376b52949af107d8f5703b77cda567c4d7d86a0693120f23"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "7.0.0"
   stack_trace:
     dependency: transitive
     description:
@@ -472,6 +495,21 @@ packages:
       url: "https://pub.flutter-io.cn"
     source: hosted
     version: "1.3.2"
+  user_repo:
+    dependency: "direct main"
+    description:
+      path: "lib/packages/user_repo"
+      relative: true
+    source: path
+    version: "0.0.0"
+  uuid:
+    dependency: transitive
+    description:
+      name: uuid
+      sha256: "22c94e5ad1e75f9934b766b53c742572ee2677c56bc871d850a57dad0f82127f"
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "4.2.2"
   vector_math:
     dependency: transitive
     description:
