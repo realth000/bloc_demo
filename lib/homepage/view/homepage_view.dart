@@ -1,5 +1,6 @@
 import 'package:bloc_demo/counter/view/counter_page.dart';
 import 'package:bloc_demo/homepage/cubit/cubit.dart';
+import 'package:bloc_demo/infinite_list/posts/view/view.dart';
 import 'package:bloc_demo/timer/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -33,6 +34,12 @@ class HomepageView extends StatelessWidget {
       icon: Icons.timer_outlined,
       selectedIcon: Icons.timer,
       body: const TimerPage(),
+    ),
+    _ScreenItem(
+      name: 'Infinite List',
+      icon: Icons.list_outlined,
+      selectedIcon: Icons.list,
+      body: const PostsPage(),
     ),
   ];
 
