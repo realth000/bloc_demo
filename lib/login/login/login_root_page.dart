@@ -57,10 +57,15 @@ class LoginRootView extends StatefulWidget {
 }
 
 class _LoginRootViewState extends State<LoginRootView> {
+  final _navigatorKey = GlobalKey<NavigatorState>();
+
+  NavigatorState get _navigator => _navigatorKey.currentState!;
+
   @override
   Widget build(BuildContext context) {
     print('>>> build LoginRootView');
     return MaterialApp(
+      navigatorKey: _navigatorKey,
       builder: (context, child) {
         final x = context.read<AuthBloc>();
         return BlocListener<AuthBloc, AuthState>(
@@ -68,13 +73,13 @@ class _LoginRootViewState extends State<LoginRootView> {
             switch (state.status) {
               case AuthAuthed():
                 print('>>> push to HomePage');
-                Navigator.of(context).pushAndRemoveUntil(
+                _navigator.pushAndRemoveUntil<void>(
                   HomePage.route(),
                   (route) => false,
                 );
               case AuthUnauthed():
                 print('>>> push to LoginPage');
-                Navigator.of(context).pushAndRemoveUntil(
+                _navigator.pushAndRemoveUntil<void>(
                   LoginPage.route(),
                   (route) => false,
                 );

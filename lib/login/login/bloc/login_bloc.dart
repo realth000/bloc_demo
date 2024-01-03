@@ -1,6 +1,6 @@
+import 'package:auth_repo/auth_repo.dart';
 import 'package:bloc/bloc.dart';
 import 'package:bloc_demo/login/login/login.dart';
-import 'package:bloc_demo/packages/auth_repo/lib/auth_repo.dart';
 import 'package:equatable/equatable.dart';
 import 'package:formz/formz.dart';
 
