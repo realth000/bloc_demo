@@ -21,7 +21,7 @@ class OpenMeteoApiClient {
   OpenMeteoApiClient({http.Client? httpClient})
       : _httpClient = httpClient ?? http.Client();
 
-  static const _baseUrlWeather = 'api.open-metio.com';
+  static const _baseUrlWeather = 'api.open-meteo.com';
   static const _baseUrlGeocoding = 'geocoding-api.open-meteo.com';
 
   final http.Client _httpClient;
@@ -70,6 +70,7 @@ class OpenMeteoApiClient {
     final req = Uri.https(_baseUrlWeather, 'v1/forecast', {
       'latitude': '$latitude',
       'longitude': '$longitude',
+      'current_weather': 'true',
     });
 
     final resp = await _httpClient.get(req);
