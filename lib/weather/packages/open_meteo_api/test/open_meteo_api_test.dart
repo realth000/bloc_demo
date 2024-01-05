@@ -78,6 +78,8 @@ void main() {
     setUp(() {
       /// Assign the fake client.
       httpClient = MockHttpClient();
+
+      /// Here [httpClient] is wrapped into [apiClient]
       apiClient = OpenMeteoApiClient(httpClient: httpClient);
     });
 
@@ -102,7 +104,9 @@ void main() {
         try {
           await apiClient.locationSearch(query);
         } catch (_) {
-          /// Check the "GET" method with the following target uri is called once and only once.
+          // Check the "GET" method with the following target uri is called once and only once.
+          //
+          // When verifying results, we are checking that the inner [httpClient]'s related method is called certain times.
           verify(() => httpClient.get(Uri.https(
                 'geocoding-api.open-meteo.com',
                 '/v1/search',
