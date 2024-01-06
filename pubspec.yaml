@@ -17,9 +17,14 @@ dependencies:
   flutter_bloc: ^8.1.3
   formz: ^0.6.1
   http: ^1.1.2
+  hydrated_bloc: ^9.1.3
+  json_annotation: ^4.8.1
+  path_provider: ^2.1.1
   stream_transform: ^2.1.0
   user_repo:
     path: 'lib/packages/user_repo/'
+  weather_repository:
+    path: 'lib/weather/packages/weather_repository'
 
 dev_dependencies:
   flutter_test:
@@ -27,6 +32,8 @@ dev_dependencies:
   flutter_lints: ^2.0.0
   bloc_test: ^9.1.5
   mocktail: ^1.0.2
+  build_runner: ^2.4.7
+  json_serializable: ^6.7.1
 
 flutter:
   uses-material-design: true

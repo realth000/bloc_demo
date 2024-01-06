@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part '../../generated/src/models/location.g.dart';
+part 'location.g.dart';
 
 /// Location model to represent location information with API.
 @JsonSerializable()

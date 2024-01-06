@@ -1,6 +1,6 @@
 import 'package:json_annotation/json_annotation.dart';
 
-part '../../generated/src/models/weather.g.dart';
+part 'weather.g.dart';
 
 /// Weather model to get weather information from API.
 @JsonSerializable()

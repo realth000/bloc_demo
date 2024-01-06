@@ -1,7 +1,7 @@
 import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
-part '../../generated/src/models/weather.g.dart';
+part 'weather.g.dart';
 
 enum WeatherCondition {
   clear,
