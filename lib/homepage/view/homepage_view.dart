@@ -3,8 +3,10 @@ import 'package:bloc_demo/homepage/cubit/cubit.dart';
 import 'package:bloc_demo/infinite_list/posts/view/view.dart';
 import 'package:bloc_demo/login/login/login_root_page.dart';
 import 'package:bloc_demo/timer/timer.dart';
+import 'package:bloc_demo/weather/lib/weather_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_repository/weather_repository.dart';
 
 class _ScreenItem {
   _ScreenItem({
@@ -48,6 +50,12 @@ class HomepageView extends StatelessWidget {
       selectedIcon: Icons.login,
       body: const LoginRootPage(),
     ),
+    _ScreenItem(
+      name: 'Weather',
+      icon: Icons.wb_sunny_outlined,
+      selectedIcon: Icons.wb_sunny,
+      body: WeatherApp(WeatherRepository()),
+    )
   ];
 
   @override
